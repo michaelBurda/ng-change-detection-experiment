@@ -1,0 +1,9 @@
+<div class="jumbotron">
+  <h1 class="display-4">Component with ChangeDetectionStrategy.OnPush with detach and detectChanges</h1>
+  <hr class="my-4">
+  <h3><code>Config</code> value: {{config?.position}}!</h3>
+  {{runChangeDetection}}
+  <h3><code>Prop</code> value: {{prop}}!</h3>
+  <button type="button" class="btn btn-primary mr-1" (click)="onClick()">Trigger change prop</button>
+  <button type="button" class="btn btn-primary mr-1" (click)="onDetectChanges()">Mark for check</button>
+</div>

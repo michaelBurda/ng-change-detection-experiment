@@ -1,0 +1,13 @@
+<div class="jumbotron">
+  <h1 class="display-4">Component with ChangeDetectionStrategy.OnPush</h1>
+  <p class="lead">With this strategy, the template of the component will only be checked in 2 cases:</p>
+  <ul>
+    <li>one of the inputs of the component changed (to be more accurate, when the reference of one of the inputs changes);</li>
+    <li>an event handler of the component was triggered.</li>
+  </ul>
+  <hr class="my-4">
+  <h3><code>Config</code> value: {{config?.position}}!</h3>
+  {{runChangeDetection}}
+  <h3><code>Prop</code> value: {{prop}}!</h3>
+  <button type="button" class="btn btn-primary mr-1" (click)="onClick()">Trigger change prop</button>
+</div>

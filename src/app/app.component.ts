@@ -6,5 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'chd-exp';
+  config = {
+    position: 'top'
+  };
+
+  updateConfig() {
+    // wouldn't trigger change detection because we haven't changed reference
+    // this.config.position = 'bottom';
+
+    // would trigger change detection (onPush)
+    this.config = {
+      position: 'bottom'
+    };
+  }
+
+  onClick() {
+    console.log('[AppComponent] onClick');
+  }
 }
